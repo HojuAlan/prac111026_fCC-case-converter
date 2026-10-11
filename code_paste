@@ -1,0 +1,24 @@
+function titleCase(string) {
+  let stringArray = []
+  let capitalizedArray = []
+  let capitalizedString
+  stringArray = string.split(' ')
+  //console.log(stringArray)
+  for (let i of stringArray) {
+    let wordArray = i.split('')
+    for (let j = 0; j < wordArray.length; j++) {
+      if (j === 0) {
+        wordArray[j] = wordArray[j].toUpperCase()
+      } else {
+        wordArray[j] = wordArray[j].toLowerCase()
+      }
+    }
+    let wordString = wordArray.join('')
+    capitalizedArray.push(wordString)
+  }
+  //console.log(capitalizedArray)
+  capitalizedString = capitalizedArray.join(' ')
+  return capitalizedString
+}
+
+console.log(titleCase('a bear and a bug'))
